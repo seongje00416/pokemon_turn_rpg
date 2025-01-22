@@ -19,8 +19,6 @@ public class Pokemon {
     private String name;
     @Enumerated( EnumType.STRING )
     private PokemonType pokemonType;
-    @OneToMany
-    private Skill skill;
     private int attack;
     private int defense;
     private int specialAttack;
@@ -28,4 +26,5 @@ public class Pokemon {
     private int speed;
     private int accuracy;
     private int avoidance;
+    private int hp;
 }

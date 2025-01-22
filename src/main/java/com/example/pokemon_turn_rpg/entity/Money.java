@@ -6,22 +6,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.FieldNameConstants;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @FieldNameConstants
-public class BattleLog {
+public class Money {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private Long id;
-    private LocalDateTime battleTime;
-    @ManyToOne
+    @OneToOne
     private User user;
-    @ManyToOne
-    private User opposite;
-    private int winnerId;
-
+    private int pokeBall;
+    private int greatBall;
+    private int hyperBall;
+    private int whiteFlute;
+    private int gold;
 }

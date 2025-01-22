@@ -19,4 +19,6 @@ public class User {
     private Account account;
     private String nickname;
     private int level;
+    private int exp;
+    private String profilePokemon;
 }

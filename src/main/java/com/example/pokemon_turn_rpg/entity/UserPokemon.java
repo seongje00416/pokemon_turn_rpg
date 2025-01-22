@@ -23,4 +23,5 @@ public class UserPokemon {
     private Pokemon pokemon;
     private int level;
     private LocalDateTime obtainTime;
+
 }

@@ -1,8 +1,7 @@
 package com.example.pokemon_turn_rpg.entity;
 
-import com.example.pokemon_turn_rpg.type.PokemonType;
-import com.example.pokemon_turn_rpg.type.SkillType;
-import com.example.pokemon_turn_rpg.type.Target;
+import com.example.pokemon_turn_rpg.type.NormalEquipment;
+import com.example.pokemon_turn_rpg.type.Stat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,22 +9,20 @@ import lombok.Setter;
 import lombok.experimental.FieldNameConstants;
 
 @Entity
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 @FieldNameConstants
-public class Skill {
+public class Equipment {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private Long id;
-    private String name;
-    private int value;
     @Enumerated( EnumType.STRING )
-    private PokemonType pokemonType;
-    private String description;
+    private NormalEquipment equipment;
     @Enumerated( EnumType.STRING )
-    private SkillType skillType;
-    private boolean isActive;
+    private Stat mainStat;
+    private int mainValue;
     @Enumerated( EnumType.STRING )
-    private Target target;
+    private Stat subStat;
+    private int subValue;
 }
