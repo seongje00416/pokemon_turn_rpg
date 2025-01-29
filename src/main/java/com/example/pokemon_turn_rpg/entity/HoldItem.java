@@ -1,28 +1,24 @@
 package com.example.pokemon_turn_rpg.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.FieldNameConstants;
-
-import java.time.LocalDateTime;
 
 @Entity
 @Setter
 @Getter
 @NoArgsConstructor
 @FieldNameConstants
-public class UserPokemon {
+public class HoldItem {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private Long id;
-    @OneToOne
-    private User user;
-    @ManyToOne
-    private Pokemon pokemon;
-    private int level;
-    private int exp;
-    private LocalDateTime obtainTime;
-
+    private String name;
+    private String description;
+    private String effect;
 }
