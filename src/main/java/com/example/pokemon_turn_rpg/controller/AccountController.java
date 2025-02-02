@@ -40,7 +40,7 @@ public interface AccountController {
             )
     })
     @PostMapping( value = "/login" )
-    ResponseEntity<SuccessResponse<Integer>> loginAccount(
+    ResponseEntity<SuccessResponse<Long>> loginAccount(
             @RequestParam String email,
             @RequestParam String password
     );
