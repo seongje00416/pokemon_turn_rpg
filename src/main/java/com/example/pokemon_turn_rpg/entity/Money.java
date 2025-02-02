@@ -19,7 +19,7 @@ public class Money {
     private User user;
     private int pokeBall;
     private int greatBall;
-    private int hyperBall;
+    private int ultraBall;
     private int whiteFlute;
     private int gold;
 }

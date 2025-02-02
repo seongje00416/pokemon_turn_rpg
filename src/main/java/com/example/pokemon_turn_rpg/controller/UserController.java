@@ -1,6 +1,10 @@
 package com.example.pokemon_turn_rpg.controller;
 
 import com.example.pokemon_turn_rpg.common.SuccessResponse;
+import com.example.pokemon_turn_rpg.dto.request.ChangeProfileImageRequest;
+import com.example.pokemon_turn_rpg.dto.request.UseUserMoneyRequest;
+import com.example.pokemon_turn_rpg.dto.request.UserExpRequest;
+import com.example.pokemon_turn_rpg.dto.response.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -76,8 +80,7 @@ public interface UserController {
     })
     @PatchMapping( "/userExpUpdate" )
     ResponseEntity<SuccessResponse<UserExpResponse>> userExpUpdate (
-            @RequestParam Long userId,
-            @RequestParam Integer increaseExp
+            @RequestBody UserExpRequest userExpRequest
     );
     
     // UserPokemon 엔티티
