@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class EquipmentService {
-    private EquipmentRepository equipmentRepository;
-    private SpecialEquipmentRepository specialEquipmentRepository;
-    private HoldItemRepository holdItemRepository;
+    private final EquipmentRepository equipmentRepository;
+    private final SpecialEquipmentRepository specialEquipmentRepository;
+    private final HoldItemRepository holdItemRepository;
 }

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping( "/api/v1/equipment" )
 @RequiredArgsConstructor
 public class EquipmentImplements implements EquipmentController {
-    private EquipmentService equipmentService;
+    private final EquipmentService equipmentService;
 
     @Override
     public ResponseEntity<SuccessResponse<GetWearEquipmentResponse>> getWearEquipment(Long userPokemonId) {
