@@ -2,6 +2,9 @@ package com.example.pokemon_turn_rpg.controller;
 
 import com.example.pokemon_turn_rpg.common.SuccessResponse;
 import com.example.pokemon_turn_rpg.dto.request.ChangeNormalEquipmentRequest;
+import com.example.pokemon_turn_rpg.dto.response.GetHoldItemResponse;
+import com.example.pokemon_turn_rpg.dto.response.GetUserNormalEquipmentResponse;
+import com.example.pokemon_turn_rpg.dto.response.GetUserSpecialEquipmentResponse;
 import com.example.pokemon_turn_rpg.dto.response.GetWearEquipmentResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
