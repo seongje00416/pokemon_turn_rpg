@@ -25,4 +25,9 @@ public class Equipment {
     @Enumerated( EnumType.STRING )
     private Stat subStat;
     private int subValue;
+    private Long wornPokemonId;
+
+    public void update( Long wornPokemonId ){
+        this.wornPokemonId = wornPokemonId;
+    }
 }

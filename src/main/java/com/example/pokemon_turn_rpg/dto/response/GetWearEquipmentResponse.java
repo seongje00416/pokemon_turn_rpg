@@ -25,6 +25,7 @@ public record GetWearEquipmentResponse(
         Long holdItemId
 ) {
     public static GetWearEquipmentResponse of (
+            Long pokemonId,
             Equipment normalEquipment1,
             Equipment normalEquipment2,
             Equipment normalEquipment3,
@@ -33,6 +34,7 @@ public record GetWearEquipmentResponse(
             HoldItem holdItem
     ) {
         return GetWearEquipmentResponse.builder()
+                .userPokemonId( pokemonId )
                 .normalEquipmentId1( normalEquipment1.getId() )
                 .normalEquipmentId2( normalEquipment2.getId() )
                 .normalEquipmentId3( normalEquipment3.getId() )

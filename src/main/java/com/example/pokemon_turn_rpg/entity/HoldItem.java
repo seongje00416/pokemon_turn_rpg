@@ -21,4 +21,9 @@ public class HoldItem {
     private String name;
     private String description;
     private String effect;
+    private Long wornPokemonId;
+
+    public void update( Long wornPokemonId ){
+        this.wornPokemonId = wornPokemonId;
+    }
 }

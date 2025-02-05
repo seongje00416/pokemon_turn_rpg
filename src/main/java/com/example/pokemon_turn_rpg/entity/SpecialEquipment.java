@@ -22,5 +22,10 @@ public class SpecialEquipment {
     private int value;
     private String description;
     private String effect;
+    private Long wornPokemonId;
+
+    public void update( Long wornPokemonId ){
+        this.wornPokemonId = wornPokemonId;
+    }
 
 }

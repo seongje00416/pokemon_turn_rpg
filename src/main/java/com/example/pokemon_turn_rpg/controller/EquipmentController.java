@@ -1,5 +1,6 @@
 package com.example.pokemon_turn_rpg.controller;
 
+import com.example.pokemon_turn_rpg.common.PageResponse;
 import com.example.pokemon_turn_rpg.common.SuccessResponse;
 import com.example.pokemon_turn_rpg.dto.request.ChangeNormalEquipmentRequest;
 import com.example.pokemon_turn_rpg.dto.response.GetHoldItemResponse;
