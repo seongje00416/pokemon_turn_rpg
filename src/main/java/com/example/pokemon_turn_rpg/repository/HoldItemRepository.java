@@ -9,4 +9,5 @@ import java.util.Optional;
 
 public interface HoldItemRepository extends JpaRepository<HoldItem, Long> {
     Optional<HoldItem> findAllByWornPokemonId(Long wornPokemonId );
+    Page<HoldItem> findAllByUserId( Long userId );
 }

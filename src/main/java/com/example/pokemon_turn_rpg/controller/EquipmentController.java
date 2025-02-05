@@ -94,7 +94,7 @@ public interface EquipmentController {
             )
     })
     @GetMapping( "/getNormalEquipment/{userId}")
-    ResponseEntity<SuccessResponse<GetUserNormalEquipmentResponse>> getUserNormalEquipmentList (
+    ResponseEntity<SuccessResponse<PageResponse<GetUserNormalEquipmentResponse>>> getUserNormalEquipmentList (
             @PathVariable Long userId
     );
 
@@ -110,7 +110,7 @@ public interface EquipmentController {
             )
     })
     @GetMapping( "/getSpecialEquipment/{userId}" )
-    ResponseEntity<SuccessResponse<GetUserSpecialEquipmentResponse>> getUserSpecialEquipmentList (
+    ResponseEntity<SuccessResponse<PageResponse<GetUserSpecialEquipmentResponse>>> getUserSpecialEquipmentList (
             @PathVariable Long userId
     );
     
@@ -126,7 +126,7 @@ public interface EquipmentController {
             )
     })
     @GetMapping( "/getHoldItem/{userId}" )
-    ResponseEntity<SuccessResponse<GetHoldItemResponse>> getUserHoldItemList (
+    ResponseEntity<SuccessResponse<PageResponse<GetHoldItemResponse>>> getUserHoldItemList (
             @PathVariable Long userId
     );
 

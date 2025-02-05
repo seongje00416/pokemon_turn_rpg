@@ -26,6 +26,7 @@ public class Equipment {
     private Stat subStat;
     private int subValue;
     private Long wornPokemonId;
+    private Long userId;
 
     public void update( Long wornPokemonId ){
         this.wornPokemonId = wornPokemonId;

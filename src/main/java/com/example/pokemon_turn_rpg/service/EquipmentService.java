@@ -1,6 +1,10 @@
 package com.example.pokemon_turn_rpg.service;
 
 import com.example.pokemon_turn_rpg.common.PageResponse;
+import com.example.pokemon_turn_rpg.common.PageUtils;
+import com.example.pokemon_turn_rpg.dto.response.GetHoldItemResponse;
+import com.example.pokemon_turn_rpg.dto.response.GetUserNormalEquipmentResponse;
+import com.example.pokemon_turn_rpg.dto.response.GetUserSpecialEquipmentResponse;
 import com.example.pokemon_turn_rpg.dto.response.GetWearEquipmentResponse;
 import com.example.pokemon_turn_rpg.entity.Equipment;
 import com.example.pokemon_turn_rpg.entity.HoldItem;
@@ -49,5 +53,14 @@ public class EquipmentService {
         beforeItem.update( Long.MIN_VALUE );
         HoldItem afterItem = holdItemRepository.findById( after ).orElseThrow();
         afterItem.update( userPokemonId );
+    }
+    public PageResponse<GetUserNormalEquipmentResponse> getUserNormalEquipment( Long userId ){
+        return PageUtils.toPageResponse( equipmentRepository.findAllByUserId( userId ) ).map( equipment -> { return GetUserNormalEquipmentResponse.of(equipment); } );
+    }
+    public PageResponse<GetUserSpecialEquipmentResponse> getUserSpecialEquipment( Long userId ){
+        return PageUtils.toPageResponse( specialEquipmentRepository.findAllByUserId( userId ) ).map( specialEquipment -> { return GetUserSpecialEquipmentResponse.of( specialEquipment ); } );
+    }
+    public PageResponse<GetHoldItemResponse> getUserHoldItem( Long userId ){
+        return PageUtils.toPageResponse( holdItemRepository.findAllByUserId( userId ) ).map( holdItem -> { return GetHoldItemResponse.of( holdItem ); } );
     }
 }

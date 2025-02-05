@@ -23,6 +23,7 @@ public class SpecialEquipment {
     private String description;
     private String effect;
     private Long wornPokemonId;
+    private Long userId;
 
     public void update( Long wornPokemonId ){
         this.wornPokemonId = wornPokemonId;

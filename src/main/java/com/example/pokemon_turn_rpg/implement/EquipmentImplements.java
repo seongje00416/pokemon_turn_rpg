@@ -45,17 +45,17 @@ public class EquipmentImplements implements EquipmentController {
     }
 
     @Override
-    public ResponseEntity<SuccessResponse<GetUserNormalEquipmentResponse>> getUserNormalEquipmentList(Long userId) {
-        return null;
+    public ResponseEntity<SuccessResponse<PageResponse<GetUserNormalEquipmentResponse>>> getUserNormalEquipmentList(Long userId) {
+        return SuccessResponse.of( equipmentService.getUserNormalEquipment( userId ) ).asHttp( HttpStatus.OK );
     }
 
     @Override
-    public ResponseEntity<SuccessResponse<GetUserSpecialEquipmentResponse>> getUserSpecialEquipmentList(Long userId) {
-        return null;
+    public ResponseEntity<SuccessResponse<PageResponse<GetUserSpecialEquipmentResponse>>> getUserSpecialEquipmentList(Long userId) {
+        return SuccessResponse.of( equipmentService.getUserSpecialEquipment( userId ) ).asHttp( HttpStatus.OK );
     }
 
     @Override
-    public ResponseEntity<SuccessResponse<GetHoldItemResponse>> getUserHoldItemList(Long userId) {
-        return null;
+    public ResponseEntity<SuccessResponse<PageResponse<GetHoldItemResponse>>> getUserHoldItemList(Long userId) {
+        return SuccessResponse.of( equipmentService.getUserHoldItem( userId ) ).asHttp( HttpStatus.OK );
     }
 }

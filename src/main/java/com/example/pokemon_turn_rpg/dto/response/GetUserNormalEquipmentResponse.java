@@ -6,8 +6,6 @@ import com.example.pokemon_turn_rpg.type.Stat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 
-import static com.sun.beans.introspect.PropertyInfo.Name.description;
-
 @Builder
 @Schema( name = "Get User's Normal Equipment Response", description = "사용자의 일반 장비 목록 조회 응답")
 public record GetUserNormalEquipmentResponse(

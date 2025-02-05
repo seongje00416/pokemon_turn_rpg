@@ -9,4 +9,5 @@ import java.util.Optional;
 
 public interface SpecialEquipmentRepository extends JpaRepository<SpecialEquipment, Long> {
     Optional<SpecialEquipment> findAllByWornPokemonId(Long wornPokemonId);
+    Page<SpecialEquipment> findAllByUserId( Long userId );
 }
